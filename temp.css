@@ -1,0 +1,39 @@
+
+/* footer responsive */
+
+@media screen and (max-width: 770px) {
+    footer {
+        padding: 0px;
+        width: 100%;
+    }
+    footer div {
+        width: 50vw;
+    }
+    footer div {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        margin: 1rem 0rem;
+        min-height: 10rem;
+        padding: 1rem;
+        /* background-color: red; */
+        flex-wrap: wrap;
+        /* background-color: red; */
+        /* to align all items in center  */
+        text-align: center;
+    }
+    footer>:nth-child(odd) {
+        background-color: rgb(164, 230, 245);
+    }
+    /* footer> div > ul :nth-child(odd) {
+        background-color: rgb(164, 230, 245);
+    } */
+    footer div ul li {
+        text-align:center;
+    }
+}
+
+-------------------------------
+

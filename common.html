@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MR-Accounts</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- nav font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Nanum+Myeongjo&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <!-- navbar -->
+      <nav class="nav">
+        <div class="left-logo">
+          <div class="upper-logo">
+            <span class="mr"> MR </span>
+            <span class="accounts"> accounting </span>
+          </div>
+          <div class="lower-logo">Clear finances, bright future.</div>
+        </div>
+
+        <div class="right-links">
+          <a href="#">Home </a>
+          <a href="#">About </a>
+          <a href="#">Services </a>
+          <a href="#">Contact </a>
+        </div>
+        <button id="toggleNav" class="toggleNav"></button>
+      </nav>
+
+
+   <footer>
+        
+        <div class="quickLinks" ">
+          <h4>Quick Links</h4>
+          <ul>
+              <li>
+                  <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+          </ul>
+        </div>
+      
+        <div class="contactUs" >
+          <h4>Contact Us</h4>
+          <ul>
+              <li><u>Email:</u> nayanihadi97@gmail.com</li>
+              <li><u>Phone:</u> +91 9726127214</li>
+              <li><u>Address:</u> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, modi impedit.</li>
+          </ul>
+        </div>
+      
+        <div class="services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Tax Preparation</a></li>
+            <li><a href="#">Bookkeeping</a></li>
+            <li><a href="#">Financial Consulting</a></li>
+          </ul>
+        </div>
+      
+        <div class="socialMedia">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook"></i>FaceBook</a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+          </ul>
+        </div>
+  </footer>
+      <div class="footer-bottom">
+        <p class="cpright">&copy; 2024 MR accounting. All rights reserved.</p>
+      </div>
+    
+
+    <!-- <div style="height: 3000px; background-color: red">
+        <h1>hadi </h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+      dolore facere itaque quo assumenda. Assumenda et laboriosam esse nostrum.
+      Quos sapiente necessitatibus cumque minima quasi distinctio nemo aliquam,
+      adipisci ex eius perferendis mollitia eos reprehenderit quibusdam aperiam
+      placeat consequuntur nesciunt labore facilis ab expedita numquam. Quod
+      quibusdam similique blanditiis commodi ex iure, aliquam beatae voluptate
+      quas impedit aut reiciendis id animi debitis temporibus a magnam
+      architecto officia quos eveniet. Deserunt aut reprehenderit sunt
+      assumenda! Natus harum, saepe blanditiis reiciendis veritatis rem porro
+      ad? Repellat ipsum minima veniam esse magni quod fuga? Facilis laborum
+      quae quis saepe praesentium sint voluptates error.
+    </div> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- to make navbar responsive -> toggle - button -->
+    <script>
+        const toggleButton = document.getElementById('toggleNav');
+
+        const navLinks = document.querySelector('.right-links');
+        document.getElementById('toggleNav').innerHTML = "Hide ";
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('show-nav');
+            if (document.getElementById('toggleNav').innerHTML === "show ") {
+                document.getElementById('toggleNav').innerHTML = "Hide ";
+            }
+            else {
+                document.getElementById('toggleNav').innerHTML = "show ";
+            }
+        });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,310 @@
+/* * Services page */
+
+svg {
+  /* width: 90%; */
+  width: 80%;
+  height: 80%;
+  /* margin-top: .5rem; */
+  /* background-color: red; */
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+
+#file2,
+#file1 {
+  fill-opacity: 1;
+  animation: files linear 2s infinite alternate-reverse;
+}
+
+@keyframes files {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(2%);
+  }
+}
+
+#hand,
+#hand2 {
+  animation: hand 2s infinite alternate-reverse;
+  transform-origin: 0;
+}
+@keyframes hand {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+
+.main-service {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.right-main-service {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* background-color: black; */
+  /* padding: 1rem; */
+
+  /* to avoid wrapping without display: flex; */
+  white-space: nowrap;
+}
+
+.right-main-service > * {
+  /* width: calc(80% - 10px); */
+}
+
+.main-right-top-img {
+  /* height: 100%; */
+  width: 100%;
+  /* border: 10px solid black; */
+  /* border-radius: 50px; */
+  /* display: block; */
+  text-align: center;
+}
+
+.right-main-service > * img {
+  height: 18vmax;
+  width: 20vmax;
+  margin: 1rem;
+  border-radius: 20px;
+}
+
+/* * horizontal scrole */
+
+.logo {
+  background-color: rgb(189, 189, 242);
+  overflow-x: hidden;
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  width: 90%;
+  margin: auto;
+  white-space: nowrap;
+  position: relative;
+  margin-top: 1rem;
+  /* width: 80vw; */
+  /* align-self: center; */
+}
+
+.logo::before,
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 2;
+}
+
+.logo::before {
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgb(0, 0, 0, 0),
+    rgb(189, 189, 242)
+  ); /** safari browser does not support transparant that's why have to use rgb(0, 0, 0, 0)*/
+}
+
+.logo::after {
+  right: 0;
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 0, 0),
+    rgb(189, 189, 242)
+  ); /** safari browser does not support transparant that's why have to use rgb(0, 0, 0, 0)*/
+}
+
+.logo:hover .logo-slide {
+  animation-play-state: paused;
+}
+
+.logo-slide {
+  white-space: nowrap;
+  display: inline-block;
+  animation: slide 40s linear infinite;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-slide img {
+  width: 200px;
+  margin: 0 30px;
+}
+
+/* * cards  */
+
+main .cards {
+  height: 100vh;
+  width: 100vw;
+
+  /* * sticky  */
+  position: sticky;
+  top: 0;
+  margin: 1rem 0;
+}
+
+main .cards img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  /* opacity: 0.2; */
+}
+
+.blogs {
+  /* margin-top: 10rem; */
+
+  position: relative;
+  background-color: #dbe7ec;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  /* height: 1000px; */
+  /* background-color: red; */
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.blogs div h1 {
+  font-size: 1.3em;
+}
+.blogs div p {
+  font-size: 1em;
+}
+
+.rdmore-btn a {
+  text-decoration: none;
+}
+
+.rdmore-btn {
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 50px;
+  transition: all 500ms ease;
+  display: block;
+  font-weight: bold;
+}
+.rdmore-btn:hover {
+  background-color: #cc4df3;
+}
+.readMore:hover .rdmore-btn a {
+  color: white;
+}
+
+.b1,
+.b2,
+.b3 {
+  height: max-content;
+  padding: 1rem;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.readMore {
+  height: 20%;
+  /* background-color: rgba(255, 255, 0, 0.283); */
+  display: flex;
+  align-items: end;
+}
+
+/* * contact form  */
+.form {
+  /* background-color: black; */
+  color: white;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  /* background-color: red; */
+  background-color: rgba(164, 230, 245, 0.627);
+
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.left-form {
+  /* background-color: yellow; */
+  height: 100%;
+  width: 100%;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  display: grid;
+  
+
+}
+.left-form> * {
+  margin: auto;
+  width: 50%;
+  padding: 0 2rem;
+  background-color: yellow;
+}
+
+.right-form {
+  width: 100%;
+  /* background-color: black; */
+}
+
+.form input {
+  border-radius: 20px;
+  padding: 0 0 0 0.4rem;
+  border: 1px solid rgb(0, 0, 0, 0);
+}
+
+.form textarea {
+  border-radius: 20px;
+  padding: 0.4rem;
+  border: 1px solid rgb(0, 0, 0, 0);
+
+}
+
+.form textarea:focus,
+.form input:focus {
+  border: 1px solid #cc4df3 ;
+  outline: none;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .main-service {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* background-color: black; */
+  }
+  .blogs,
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .form {
+    width: 100vw;
+    font-size: 1vmax;
+    height: max-content;
+  }
+  .form .left-form {
+    grid-template-columns: 1fr;
+  }
+  
+}

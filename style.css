@@ -1,0 +1,181 @@
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    * {
+        font-size: large;
+    }
+    /* Styles for small screens */
+    .nav {
+         flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+    .right-links {
+        margin-top: 1rem; /* Add spacing between upper and lower sections */
+    }
+    /* Show or hide navigation links -> toggle - button */
+    .right-links.show-nav {
+        display: none;
+    }
+    
+    /* toggle nav */
+    .toggleNav {
+        display: inline;
+        margin: 1rem;
+        padding: 10px 5px;
+    }
+    /* footer  */
+    
+}
+@media (min-width: 768px) {
+    .toggleNav {
+        display: none;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+    color: #cc4df3;
+    /* cursor: none; */
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #98afbc14;
+    overflow-x: hidden;
+}
+
+.cursor {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    /* background-color: #cc4df3; */
+    border: 1.5px solid #cc4df3;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    z-index: 100;
+
+    transform: translate(-50%, -50%);
+    transition: all 200ms ease;
+    pointer-events: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0rem 1rem;
+    width: 100%;
+    /* to make nav bar stiky at top */
+    background-color: #fff;
+    z-index: 10;
+    position: sticky !important;
+    top: 0;
+}
+
+.left-logo {
+    margin-left: .5rem;
+}
+
+nav .left-logo .upper-logo .mr {
+    font-family: Josefin Slab;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+nav .left-logo .upper-logo .accounts {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+nav .left-logo .lower-logo {
+    font-weight: 100;
+    font-size: .65rem;
+    margin: 0px 1rem;    
+}
+
+nav .right-links {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+nav .right-links a,
+.toggleNav {
+    text-decoration: none;
+    color: #cc4df3;
+    font-weight: 500;
+    position: relative;
+    transition: all 500ms ease;
+    padding: 7px 18px;
+    max-width: max-content;
+    /* border-radius: 999px; */
+    border-radius: 50px;
+    border: none;
+}
+nav .right-links a:hover,
+.toggleNav:hover {
+    background-color: #cc4df3;
+    color: white;
+}
+
+/* footer  */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 1rem;
+}
+footer h4 {
+    font-size: 1.3rem;
+}
+footer div ul li {
+    list-style: none;
+}
+
+footer div ul li a {
+    text-decoration: none;
+}
+
+footer div {
+    /* text-align:start; */
+    /* background-color: yellow; */
+    width: 100%;
+    line-height: 2rem;
+    padding: 1rem;
+
+}
+
+.cpright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* footer responsive */
+@media screen and (max-width: 770px) {
+    footer {
+        padding: 0px;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    footer div {
+        width: 100%;
+        margin: auto;
+        margin: 1rem 0rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    footer>:nth-child(odd) {
+        background-color: rgba(164, 230, 245, 0.627);
+    }
+    footer div ul li {
+        text-align:center;
+    }
+}
